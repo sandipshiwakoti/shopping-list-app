@@ -1,0 +1,263 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Prompt:wght@300;400;500;600&display=swap");
+
+/* resets */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global variables */
+:root {
+  --black: #222;
+  --white: #fff;
+  --blue: rgb(116, 45, 182);
+  --red: #8d4422;
+  --green: #2e8813;
+
+  --headingFont: "PT Sans", sans-serif;
+  --bodyFont: "Prompt", sans-serif;
+
+  --borderRadius: 0.25rem;
+  --transition: 0.3s ease-in-out all;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* body */
+body {
+  background: linear-gradient(-50deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+
+  font-family: var(--bodyFont);
+}
+
+/* global styles */
+.section {
+  min-height: 100vh;
+}
+
+.section-center {
+  width: 95vw;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 3rem;
+  padding-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.section-title {
+  font-size: 2.7rem;
+  font-weight: 900;
+  font-family: var(--headingFont);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: var(--headingFont);
+}
+
+.btn:hover,
+.btn-icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+/* shopping section */
+.shopping-form-container,
+.shopping-item {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: var(--borderRadius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.shopping-form {
+  display: flex;
+}
+
+#shopping-item-input {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+.shopping-item {
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-icon {
+  font-size: 1rem;
+  color: var(--white);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--borderRadius);
+}
+
+.btn-edit {
+  background-color: var(--blue);
+}
+
+.btn-remove {
+  background-color: var(--red);
+}
+
+.shopping-item-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: var(--bodyFont);
+}
+
+.completed-icon {
+  position: absolute;
+  transform: translate(-2rem, 0.15rem);
+  display: none;
+  color: green;
+  font-size: 1.2rem;
+}
+
+.completed.shopping-item .shopping-item-name {
+  text-decoration: line-through;
+}
+
+.completed.shopping-item .completed-icon {
+  display: block !important;
+}
+
+.message {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+  visibility: hidden;
+  text-transform: lowercase;
+}
+
+.message:first-letter {
+  text-transform: uppercase;
+}
+
+.message.show {
+  visibility: visible;
+}
+
+.message.success {
+  color: var(--green);
+}
+
+.message.error {
+  color: var(--red);
+}
+
+@media screen and (max-width: 500px) {
+  .section {
+    padding: 1.5rem 0;
+  }
+
+  .shopping-form-container,
+  .shopping-item {
+    padding: 1rem 1.5rem;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .shopping-form {
+    display: grid;
+  }
+
+  #shopping-item-input {
+    padding: 0.4rem 0;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+  .shopping-item-name {
+    font-size: 0.9rem;
+  }
+
+  .btn-icon {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .completed-icon {
+    transform: translate(-1.2rem, 0.15rem);
+  }
+}
+
+/* edit.html */
+.form-group {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.form-control {
+  font-size: 1.3rem;
+  font-weight: 500;
+  flex-grow: 1;
+  padding: 0.3rem;
+}
+
+.form-group:last-child .form-control {
+  flex-grow: 0;
+  transform: scale(1.5);
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 10rem;
+}
+
+.btn-edit-item {
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: var(--borderRadius);
+}
+
+.btn-back {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  text-align: center;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadow);
+}
+
+@media screen and (max-width: 568px) {
+  .btn-back {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  label {
+    font-size: 0.9rem;
+    width: 8rem;
+  }
+
+  .form-control {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+}

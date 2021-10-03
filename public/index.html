@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <!-- fontawesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- style.css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="section" id="shopping">
+      <div class="section-center">
+        <div class="shopping-form-container">
+          <h1 class="section-title">Shopping List</h1>
+          <form class="shopping-form" id="add-item-form">
+            <input type="text" name="name" id="shopping-item-input" />
+            <button class="btn btn-add">Add item</button>
+          </form>
+          <div class="message"></div>
+        </div>
+        <div class="shopping-items"></div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

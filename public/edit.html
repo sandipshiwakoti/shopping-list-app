@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <!-- fontawesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- style.css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="section" id="shopping">
+      <div class="section-center">
+        <div class="shopping-form-container">
+          <h1 class="section-title">Shopping List</h1>
+          <form class="shopping-edit-form">
+            <div class="form-group">
+              <label for="id-input">ID</label>
+              <input type="text" class="form-control" name="id" id="id-input" />
+            </div>
+            <div class="form-group">
+              <label for="name-input">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name-input"
+              />
+            </div>
+            <div class="form-group">
+              <label for="completed-input">Completed</label>
+              <input
+                type="checkbox"
+                class="form-control"
+                id="completed-input"
+                name="completed"
+              />
+            </div>
+          </form>
+          <button class="btn btn-edit-item">Edit Item</button>
+          <div class="message"></div>
+        </div>
+        <a href="./index.html" class="btn btn-back">Back to Shopping List</a>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="./edit.js"></script>
+  </body>
+</html>
